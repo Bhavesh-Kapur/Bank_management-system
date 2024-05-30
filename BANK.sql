@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Accounts`
+-- Table structure for table `accounts`
 --
 
-DROP TABLE IF EXISTS `Accounts`;
+DROP TABLE IF EXISTS `accounts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Accounts` (
+CREATE TABLE `accounts` (
   `name` varchar(20) DEFAULT NULL,
   `accNo` int NOT NULL,
   `pin` int DEFAULT NULL,
@@ -30,17 +30,19 @@ CREATE TABLE `Accounts` (
   `credit` float DEFAULT NULL,
   `bal` float DEFAULT NULL,
   `mobNo` int DEFAULT NULL,
+  `des` varchar(250) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`accNo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Accounts`
+-- Dumping data for table `accounts`
 --
 
-LOCK TABLES `Accounts` WRITE;
-/*!40000 ALTER TABLE `Accounts` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Accounts` ENABLE KEYS */;
+LOCK TABLES `accounts` WRITE;
+/*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-28 21:15:51
+-- Dump completed on 2024-05-30  7:39:15
