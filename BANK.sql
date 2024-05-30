@@ -42,7 +42,7 @@ CREATE TABLE `accounts` (
 
 LOCK TABLES `accounts` WRITE;
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
-INSERT INTO `accounts` VALUES ('Bhavesh',12345,904,0,0,40000,9027729449,'nil','ddnbhavesh@gmail.com'),('Kashish',129876,987,NULL,NULL,50000,902772933,NULL,'kashish@gmail.com');
+INSERT INTO `accounts` VALUES ('Bhavesh',12345,904,0,0,40000,9027729449,'nil','ddnbhavesh@gmail.com'),('aryan',129874,976,NULL,NULL,50000,9027728337,NULL,'aryan@gmail.com'),('Kashish',129876,987,NULL,NULL,50000,902772933,NULL,'kashish@gmail.com');
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-30  9:37:07
+-- Dump completed on 2024-05-30 17:31:54
