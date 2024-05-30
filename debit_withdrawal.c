@@ -4,7 +4,7 @@
 // #include<mysql/mysql.h>
 int main(){
     float deposit, withdrawal, bal;
-    // char D , W; 
+    
 printf("Welcome to workd of transactions !!");
 char option;
 printf("Enter your option deposit or withrawal the money. For deposit enter D and for withdrawal enter W. ");
