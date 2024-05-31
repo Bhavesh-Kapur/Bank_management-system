@@ -8,7 +8,7 @@ src = main.c test.c
 
 exe = final
 
-$(exe): $(SRCS) link.h
+$(exe): $(src) link.h
 	$(compiler) $(src) -o $(exe) $(CFLAGS) $(DFLAGS)
 
 clean:

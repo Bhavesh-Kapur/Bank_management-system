@@ -63,7 +63,7 @@ CREATE TABLE `transactions` (
   PRIMARY KEY (`id`),
   KEY `accNo` (`accNo`),
   CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`accNo`) REFERENCES `accounts` (`accNo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +72,7 @@ CREATE TABLE `transactions` (
 
 LOCK TABLES `transactions` WRITE;
 /*!40000 ALTER TABLE `transactions` DISABLE KEYS */;
+INSERT INTO `transactions` VALUES (1,12345,500,NULL,'Salary Deposit','2024-05-01 05:00:00'),(2,129874,NULL,200,'Grocery Shopping','2024-05-02 09:15:00'),(3,129876,NULL,150,'Electricity Bill','2024-05-03 03:50:00');
 /*!40000 ALTER TABLE `transactions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -84,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-30 22:57:34
+-- Dump completed on 2024-05-31 18:00:20
