@@ -4,7 +4,7 @@ compiler = gcc
 CFLAGS = -I/opt/homebrew/opt/mysql/include
 DFLAGS = -L/opt/homebrew/opt/mysql/lib -lmysqlclient
 
-src = main.c test.c
+src = main.c backend.c
 
 exe = final
 
