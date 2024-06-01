@@ -20,11 +20,18 @@ int main(){
         break;
         
         case 2:
+        printf("Welcome To Login, Login using Account no and Your Pin \n");
         printf("Enter your account no \n");
         int accNo;
         scanf("%d", &accNo);
-        printf("Press 9 for Your mini statement will be shown \n");
-        // sleep(5);
+        printf("Enter your Account Pin \n");
+        int pin;
+        scanf("%d", &pin);
+        //  int x= login(accNo,pin);
+        // printf("%d", x);
+
+        // printf("Press 9 for Your mini statement will be shown \n");
+        // // sleep(5);
         char* y= slipGeneration(accNo);
         printf("%s", y);
         break;
