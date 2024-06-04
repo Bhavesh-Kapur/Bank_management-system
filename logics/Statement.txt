@@ -1,0 +1,2 @@
+Transactions are:
+1, 12345, 500, NULL, Salary Deposit, 2024-05-01 10:30:00
