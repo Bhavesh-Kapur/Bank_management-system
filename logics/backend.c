@@ -96,9 +96,6 @@ char* slipGeneration(int accNo){
         return "Error Occured while fetching";
 
     }
-    
-
-
     res = mysql_use_result(conn);
     if (!res) {
         fprintf(stderr, "Error storing result: %s\n", mysql_error(conn));
@@ -129,6 +126,63 @@ char* slipGeneration(int accNo){
     
 }
 
+
+
+
+char* miniStmt(int accNo){
+    MYSQL *conn;
+    MYSQL_RES *res;
+    FILE *fptr;
+    MYSQL_ROW row;
+    char query[512];
+    static char result[4096];
+    int num_fields, i;
+    conn = mysql_init(NULL);
+     if(!mysql_real_connect(conn, "localhost", "root", "root", "BANK" ,0 ,NULL, 0)){
+        fprintf(stderr,"Database Connection Failed");
+        return "Internal Error Occured";
+    }
+
+    fptr = fopen("Statement.txt", "w");
+      snprintf(query,sizeof(query),
+    "select * from transactions where accNo =%d", accNo);
+
+    if (mysql_query(conn, query) != 0)
+    {
+        fprintf(stderr, "Error fetching");
+        mysql_close(conn);
+        return "Error Occured while fetching";
+
+    }
+       res = mysql_use_result(conn);
+    if (!res) {
+        fprintf(stderr, "Error storing result: %s\n", mysql_error(conn));
+        mysql_close(conn);
+        return "Error Occurred while fetching";
+    }
+     strcpy(result, "Transactions are:\n");
+
+    num_fields = mysql_num_fields(res);
+
+        while ((row = mysql_fetch_row(res)) != NULL) {
+        for (i = 0; i < num_fields; i++) {
+            strcat(result, row[i] ? row[i] : "NULL");
+            if (i < num_fields - 1) {
+                strcat(result, ", ");
+            }
+        }
+        strcat(result, "\n");
+    }
+    
+    mysql_free_result(res);
+    mysql_close(conn);
+
+
+    fprintf(fptr, result);
+    fclose(fptr);
+    return "Your Mini Statement Has been Downloaded ";
+
+}
 
 
 // int login(int accNo, int pin){
