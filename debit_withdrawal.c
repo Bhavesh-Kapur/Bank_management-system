@@ -3,6 +3,12 @@
 #include<string.h>
 //  #include<mysql/mysql.h>
 int main(){
+    // MYSQL *conn;
+    // conn = mysql_init(NULL);
+    // if(!mysql_real_connect(conn, "localhost", "root", "root", "BANK", 0, NULL, 0)){
+    //     fprintf(stderr,"Database Connection Failed \n");
+    //     return "Error Occured";
+    // }
     float debit, credit, bal;
 char option;
 printf("Enter your option credit or withrawal the money. For credit enter D and for debit enter W. ");
